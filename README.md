@@ -1,25 +1,42 @@
-# VolumeControl
-INTRODUCTION
-Gesture recognition helps computers to understand human body language. This helps to build a more potent link between humans and machines, rather than just the basic text user interfaces or graphical user interfaces (GUIs). In this project for gesture recognition, the human body’s motions are read by computer camera. Thecomputer then makes use of this data as input to handle applications. The objective of this project is to develop an interface which will capture human hand gesture dynamically and will control the volume level.
+# VolumeControl - Gesture Recognition
 
-NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+## Introduction
 
-Pycaw : Python Audio Control Library
+Gesture recognition is a technology that bridges the gap between humans and machines, enabling interactions beyond traditional text or graphical user interfaces. In this project, we use computer vision to capture and interpret human hand gestures through a computer camera. The objective is to create an interface that dynamically captures hand gestures and uses them to control the volume level of a device.
 
-Mediapipe is an open-source machine learning library of Google, which has some solutions for face recognition and gesture recognition, and provides encapsulation of python, js and other languages. MediaPipe Hands is a high-fidelity hand and finger tracking solution. It uses machine learning (ML) to infer 21 key 3D hand information from just one frame. We can use it to extract the coordinates of the key points of the hand.
+## Libraries Used
 
+- **NumPy**: NumPy is a Python library that provides support for large, multi-dimensional arrays and matrices. It also offers a collection of high-level mathematical functions to operate on these arrays.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- **Pycaw**: Pycaw is a Python Audio Control Library that allows us to control audio settings programmatically.
 
-![image](https://user-images.githubusercontent.com/82171169/171317563-c598abea-72f8-4176-83e7-2c4efb08205d.png)
+- **MediaPipe**: MediaPipe is an open-source machine learning library developed by Google. It offers solutions for face recognition and gesture recognition. In this project, we leverage MediaPipe Hands, a high-fidelity hand and finger tracking solution that uses machine learning to infer 21 key 3D hand landmarks from a single frame.
 
+## Working Principle
 
-WORKING PRINCIPLE
-The camera in our device is used for this project. It detects our hand with points in it so as it can see the distance between our thumb finger tip and index finger tip. The distance between the points 4 and 8 is directly proportional to the volume of device
+1. **Hand Detection**: The project uses the device's camera to detect hand landmarks, capturing the positions of various key points on the hand.
 
+2. **Distance Calculation**: It calculates the distance between the thumb tip and the index finger tip, which serves as a gesture indicator.
 
-METHODOLOGY/APPROACH
-Detect hand landmarks
-Calculate the distance between thumb tip and index finger tip.
-Map the distance of thumb tip and index finger tip with volume range. For my case, distance between thumb tip and index finger tip was within the range of 30 – 350 and the volume range was from -63.5 – 0.0.
-In order to exit press ‘Spacebar'
+3. **Volume Mapping**: The calculated distance between thumb tip and index finger tip is mapped to a predefined volume range. In our case, the distance range was 30 to 350, and the volume range was -63.5 to 0.0.
+
+4. **Control Volume**: The program then adjusts the device's volume based on the mapped gesture. Moving the hand closer or farther apart controls the volume accordingly.
+
+5. **Exit**: To exit the program, simply press the 'Spacebar'.
+
+## How to Use
+
+1. Ensure you have all the required libraries installed, including NumPy, Pycaw, and MediaPipe.
+
+2. Run the project.
+
+3. Use hand gestures to control the volume dynamically.
+
+4. To exit, press the 'Spacebar'.
+
+## Example Image
+
+![Gesture Recognition](https://user-images.githubusercontent.com/82171169/171317563-c598abea-72f8-4176-83e7-2c4efb08205d.png)
+
+Empower your computer to understand and respond to your hand gestures with "VolumeControl." Take control of your device's audio experience like never before.
+
